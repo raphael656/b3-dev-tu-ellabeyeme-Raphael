@@ -16,31 +16,28 @@ class Cube {
     }
 }
 
-module.exports = {
-    Cube:Cube
-}
-
 class Triangle {
-    constructor(length1,length2,length3, hauteur){
+    constructor(base,length1,length2, hauteur, prismehauteur){
+        this.base = base;
         this.length1 = length1;
         this.length2 = length2;
-        this.length3 = length3;
-
+        this.prismehauteur = prismehauteur;
         this.hauteur = hauteur;
 
     }
 
     getSideLength () {
-        return this.length1, this.length2, this.length3;
+        return [this.length1, this.length2, this.base];
     }
     getSurfaceArea () {
-        return (this.length1 * this.hauteur) / 2;
+        return (this.base * this.hauteur) / 2;
     }
     getVolume () {
-        return ((this.length1 * this.hauteur) / 2) * this.hauteur;
+        return ((this.base * this.hauteur) / 2) * this.prismehauteur;
     }
 }
 
 module.exports = {
-    Triangle:Triangle
+    Triangle:Triangle,
+    Cube:Cube
 }
