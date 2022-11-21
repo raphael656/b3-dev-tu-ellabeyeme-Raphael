@@ -37,7 +37,25 @@ class Triangle {
     }
 }
 
+class Cercle {
+    constructor(rayon){
+        this.rayon = rayon;
+
+
+    }
+
+    getSideLength () {
+        return this.rayon;
+    }
+    getSurfaceArea () {
+        return ((this.rayon * this.rayon) * 3.14) ;
+    }
+    getVolume () {
+        return ((4/3)*(this.rayon * this.rayon* this.rayon) * 3.14);
+    }
+}
 module.exports = {
     Triangle:Triangle,
-    Cube:Cube
+    Cube:Cube,
+    Cercle : Cercle
 }
