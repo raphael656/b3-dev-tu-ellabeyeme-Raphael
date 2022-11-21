@@ -1,5 +1,6 @@
 const Cube = require('../src/app').Cube;
 const Triangle = require('../src/app').Triangle;
+const Cercle = require('../src/app').Cercle;
 const expect = require('chai').expect;
 
 describe('Testing the Cube Functions', function() {
@@ -45,3 +46,25 @@ describe('Testing the Triangle Functions', function() {
     });
     
 });
+
+describe('Testing the Cercle Functions', function() {
+    it('1. The side rayon of the Cercle', function(done) {
+        let variables = new Cercle(3);
+        expect(variables.getSideLength()).deep.to.equal(3);
+        done();
+    });
+    
+    it('2. The surface area of the Cercle', function(done) {
+        let AireCercle = new Cercle(3);
+        expect(AireCercle.getSurfaceArea()).to.equal(28.26);
+        done();
+    });
+    
+    it('3. The volume of the Cercle', function(done) {
+        let volume = new Cercle(3);
+        expect(volume.getVolume()).to.equal(113.04);
+        done();
+    });
+    
+});
+
